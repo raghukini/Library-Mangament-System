@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal - www.codingnepalweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <!-- <title>Responsive Navbar | CodingNepal</title> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  background-image:url('https://image.freepik.com/free-vector/white-abstract-background_23-2148844575.jpg');
+  margin: 0;
+
+  font-family: Arial, Helvetica, sans-serif; opacity: 0.9; 
+}
+
+.topnav {
+  font: #ffffff;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  font: #ffffff;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  font: #ffffff;
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  font: #ffffff;
+  background-color: #FF304f;
+  color: white;
+}
+
+.topnav .icon {
+  font: #ffffff;
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {
+    font: #ffffff;position: relative;}
+  .topnav.responsive .icon {font: #ffffff;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {font: #ffffff;
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+    	#myBtn {font: #ffffff;
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: red; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+section {
+  font: #ffffff;
+  height: 100vh;
+  width: 100%;
+  background-color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.container {
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-image: url('https://www.teahub.io/photos/full/0-2034_plain-white-wallpapers-1080p-is-cool-wallpapers-html.jpg');
+  box-shadow: 0px 0px 20px #00000010;
+  background-color: white;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.form-group {
+  font: #ffffff;
+  width: 100%;
+  margin-top: 20px;
+  font-size: 20px;
+}
+.form-group input,
+.form-group textarea {
+ 
+  font: #ffffff;
+  width: 100%;
+  padding: 5px;
+  font-size: 18px;
+  border: 1px solid rgba(128, 128, 128, 0.199);
+  margin-top: 5px;
+}
+
+textarea {
+  font: #ffffff;
+  resize: vertical;
+}
+button[type="submit"] {
+  font: #ffffff;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 20px;
+  font-size: 24px;
+  border-radius: 8px;
+  font-family: "Montserrat";
+  color: rgb(27, 166, 247);
+  text-align: center;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s ease background-color;
+}
+button[type="submit"]:hover {
+  background-color: rgb(214, 226, 236
+    font: #ffffff;);
+}
+#status {
+  font: #ffffff;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  padding: 10px;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+#status.success {font: #ffffff;
+  background-color: rgb(211, 250, 153);
+  animation: status 4s ease forwards;
+}
+#status.error {font: #ffffff;
+  background-color: rgb(250, 129, 92);
+  color: white;
+  animation: status 4s ease forwards;
+}
+@keyframes status {
+  0% {font: #ffffff;
+    opacity: 1;
+    pointer-events: all;
+  }
+  90% {font: #ffffff;
+    opacity: 1;
+    pointer-events: all;
+  }
+  100% {font: #ffffff;
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+#myBtn:hover {font: #ffffff;
+  background-color: #3bba9c; /* Add a dark-grey background on hover */
+}
+    	*{font: #ffffff;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+nav{
+  background: #3bba9c;
+  height: 80px;
+  width: 100%;font: #ffffff;
+}
+label.logo{
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;font: #ffffff;
+}
+nav ul{
+  float: right;
+  margin-right: 20px;font: #ffffff;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;font: #ffffff;
+}
+nav ul li a{
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;font: #ffffff;
+}
+a.active,a:hover{
+  background: #e84a5f;
+  transition: .5s;font: #ffffff;
+}
+.checkbtn{
+  font-size: 30px;
+  color: #ececda;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;font: #ffffff;
+}
+#check{
+  display: none;
+}
+@media (max-width: 952px){
+  label.logo{
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+}
+@media (max-width: 858px){
+  .checkbtn{
+    display: block;
+  }
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #3bba9c;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover,a.active{
+    background: none;
+    color: #0082e6;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+}
+.slideshow-container{
+  height: 30%;
+}
+section{font: #ffffff;
+  background: url(bg1.jpg) no-repeat;
+  background-size: cover;
+  height: calc(100vh - 80px);
+}.slideshow-container {
+  position: relative;
+  background: #3bba9c;
+}
+
+/* Slides */
+.mySlides {font: #ffffff;
+  display: none;
+  padding: 33px;
+  height: 130%;
+  background-color: #edf7f6;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {font: #ffffff;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {font: #ffffff;
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {font: #ffffff;
+  background-color: #000000;
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+  text-align: center;
+  padding: 20px;
+ 
+}
+
+/* The dots/bullets/indicators */
+.dot {font: #ffffff;
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {font: #ffffff;
+  background-color: #717171;
+}
+
+/* Add an italic font style to all quotes */
+q {font-style: italic;}
+
+/* Add a blue color to the author */
+.author {color: cornflowerblue;}
+</style>
+  </head>
+  <body>
+  	<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+    <div class="topnav" id="myTopnav">
+  <a href="starting.html" class="active">Home</a>
+  <a href="adminuser.html">Contact</a>
+  <a href="index.php">Login</a>
+  <a href="adminlogin.php">Admin</a>
+  <a href="modifiedavbook.php">View Books</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+<br>
+    <div id='s2'></div><br><br>
+    <b><h1><center>About</center></h1></b><br><br>
+    <p style="text-align:center">This is our department library app, you can use this interface to enquire about the books present and make<br> booking of the books according to your need. The book will be available at the beginning of each semester<br> and you will have to return the book at the end of the semester.</p><br>
+    <p style="text-align:center">If you have any queries make sure to contact the library admin through this website through the form created.<br> Make sure to enter your USN, Email id and your phone number properly while entering the information</p><br>
+    <p style="text-align:center">Kindly give the feedback of this website</p><br><br>
+    <br>
+    <br><br><br><hr>
+    <div id='s1'>
+   <div class="slideshow-container">
+
+  <!-- Full-width slides/quotes -->
+<b><i>
+  <div class="mySlides">
+    <p>Login to check Availability of books</p>
+  </div>
+  <div class="mySlides">
+    <p>Contact admin to clear queries and to donate books</p>
+  </div>
+
+  <div class="mySlides">
+    <p>Use your college email id for log in</p>
+  </div>
+
+  <div class="mySlides">
+    <p>Make Sure to Return book in time with proper state</p>
+  </div>
+</i></b>
+  <!-- Next/prev buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<!-- Dots/bullets/indicators -->
+<div class="dot-container">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+   </div>
+       <hr>
+    
+	<div id='s3'>
+    <b><h1><center>Feedback</center></h1></b>
+<div class="container">
+    <form action="https://formspree.io/f/xeqvelyq" method="POST" >
+
+      <div class="form-group">
+        <label for="massage">Message</label>
+        <textarea name="massage" id="massage" cols="50" rows="10"></textarea>
+      </div>
+
+      <button type="submit">Submit</button>
+       	
+    </form>
+  </div>
+  <div id="status"></div>
+</section>
+</body>
+<script>
+	window.addEventListener("DOMContentLoaded", function () {
+  // get the form elements defined in your form HTML above
+
+  var form = document.getElementById("my-form");
+  var button = document.getElementById("my-form-button");
+  var status = document.getElementById("status");
+
+  // Success and Error functions for after the form is submitted
+
+  function success() {
+    form.reset();
+    status.classList.add("success");
+    status.innerHTML = "Thanks!";
+  }
+
+  function error() {
+    status.classList.add("error");
+    status.innerHTML = "Oops! There was a problem.";
+  }
+
+  // handle the form submission event
+
+  form.addEventListener("submit", function (ev) {
+    ev.preventDefault();
+    var data = new FormData(form);
+    ajax(form.method, form.action, data, success, error);
+  });
+});
+
+// helper function for sending an AJAX request
+
+function ajax(method, url, data, success, error) {
+  var xhr = new XMLHttpRequest();
+  xhr.open(method, url);
+  xhr.setRequestHeader("Accept", "application/json");
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState !== XMLHttpRequest.DONE) return;
+    if (xhr.status === 200) {
+      success(xhr.response, xhr.responseType);
+    } else {
+      error(xhr.status, xhr.response, xhr.responseType);
+    }
+  };
+  xhr.send(data);
+}
+
+ 
+    	mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+function myFunction() {
+  var x = document.getElementById("x");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+
+    </script>
+
+</html>
